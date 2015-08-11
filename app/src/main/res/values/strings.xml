@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+	<string name="app_name">音感センサー</string>
+	<string name="hello_world">Hello world!</string>
+	<string name="menu_settings">Settings</string>
+
+	<string name="menu_micSettings">マイク設定</string>
+	<string name="menu_volBorder">マイク検出閾値設定</string>
+	<string name="menu_maxDec">検出値減衰設定（小さいほど細かな音を拾いやすい）</string>
+
+</resources>
