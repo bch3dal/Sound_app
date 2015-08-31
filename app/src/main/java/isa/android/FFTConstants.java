@@ -2,6 +2,7 @@ package isa.android;
 
 import android.media.AudioFormat;
 import android.media.AudioRecord;
+import android.util.Log;
 
 /**
  * Created by Takahito on 15/08/12.
@@ -33,16 +34,16 @@ public class FFTConstants {
             samplingRate = 44100;
 
         int tmp = AudioRecord.getMinBufferSize(samplingRate, AudioFormat.CHANNEL_IN_MONO,
-                AudioFormat.ENCODING_PCM_16BIT) * 2;
+                AudioFormat.ENCODING_PCM_16BIT);
         // 2のべき乗に整える
         while (bufferSize < tmp)
             bufferSize *= 2;
         // エミュレータでないならダメ押し2倍
 //        if (!isDebug)
-//            bufferSize *= 4;
+//            bufferSize *= 2;
 
         hzStep = samplingRate / (double)bufferSize;
-
+        Log.e("HzStep", hzStep+"Hz");
 
     }
 

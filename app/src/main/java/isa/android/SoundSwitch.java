@@ -15,7 +15,7 @@ public class SoundSwitch implements Runnable {
 	private boolean isRecording = true;
 
 	// ボーダー音量 & 最大音量減衰
-	private short mBorderVolume = 500;
+	private short mBorderVolume = 0;
 	private double maxDec = 0.85;
 
 	private boolean continuous = true;
